@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - Titan Coffee Run</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+    
+    <header>
+        <h1>Titan Coffee Registration Form</h1>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Register</h2>
+            <form id="registration_form">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <span id="email_error">*</span><br>
+                
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password"><br>
+                <span id="password_error">*</span><br>
+                
+                <label for="confirm_password">Confirm Password:</label><br>
+                <input type="password" id="confirm_password" name="confirm_password"><br>
+                <span id="confirm_password_error">*</span><br>
+                
+                <input type="button" value="Register" onclick="validate_form()"><br>
+            </form>
+            
+        </section>
+    </main>
+
+    <table id="error_table" style="display: none;">
+        <tr>
+            <th>Field</th>
+            <th>Error Message</th>
+        </tr>
+    </table>
+    
+    <footer>
+        <p>&copy; 2023 Titan Coffee Run. All rights reserved.</p>
+    </footer>
+    
+    <script src="js/registration.js"></script>
+</body>
+</html>
+

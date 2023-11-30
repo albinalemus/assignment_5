@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Titan Coffee Run</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+    
+    <header>
+        <h1>Login to Titan Coffee Run</h1>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Login</h2>
+            <form id="login_form">
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username"><br>
+                
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password"><br>
+                
+                <span id="login_error"></span><br>
+                
+                <input type="button" value="Login" onclick="validate_login()">
+                <a href="reset_password.html">Reset Password</a>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Titan Coffee Run. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        "use strict";
+
+        var $ = function(id) {
+            return document.getElementById(id);
+        };
+
+        var validate_login = function() {
+            var username = $("username").value;
+            var password = $("password").value;
+
+            // Simulate admin user credentials for demo purposes
+            var adminUsername = "Admin";
+            var adminPassword = "test123";
+
+            // Check if entered credentials match admin user
+            if (username === adminUsername && password === adminPassword) {
+                // Redirect admin to sales-trends.html
+                window.location.href = "sales.html";
+            } else {
+                $("login_error").textContent = "Incorrect username or password. Please try again.";
+            }
+        };
+    </script>
+</body>
+</html>
